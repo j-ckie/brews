@@ -20,6 +20,16 @@
             - Random
             - Account/signin/signup (if we have time)
             -->
+        <div class="logo">BREWPEDIA</div>
+        <div class="nav-items">
+          <ul>
+            <li>Home</li>
+            <li id="randomBtn">Random</li>
+            <li>Search</li>
+            <!-- onclick="open search input bar" -->
+            <!-- <li>Account</li> -->
+          </ul>
+        </div>
       </div>
 
       <div class="main">
@@ -28,6 +38,20 @@
         <!-- description about site? -->
         <!-- random beer! -->
         <!-- random beer info -->
+        <div id="landing" class="hero">
+          <h1>BREWPEDIA</h1>
+          <input type="text" placeholder="Enter name of brew..." />
+          <button class="searchBtn">Submit</button>
+        </div>
+        <div class="content">
+          <div id="landingrandom">
+            <!-- Random beer when page is first loaded goes here -->
+          </div>
+          <div class="awards"></div>
+          <div class="awards"></div>
+          <div class="awards"></div>
+          <div class="awards"></div>
+        </div>
       </div>
 
       <div class="footer">
@@ -36,6 +60,14 @@
       </div>
     </div>
     <!-- bootstrap JS link -->
-    <script src="app.js"></script>
+    <!-- JS link -->
+
+    <script src="../js/secret.js"></script>
+    <!-- Prod Key -->
+    <script src="../js/keys.js"></script>
+    <!-- Sandbox Keys -->
+    <script src="../js/config.js"></script>
+    <!-- Load basic config -->
+    <script src="../js/jackie-script.js"></script>
   </body>
 </html>
