@@ -1,10 +1,14 @@
 const prodKey = prodAPIKey.key;
 
-// const keys = Object.keys(sandboxAPIKey);
-// const type = pick(keys);
-// const sandboxItems = sandboxAPIKey[type];
-// const sandboxKey = pick(sandboxItems);
-const sandboxKey = sandboxAPIKey.keyOne;
+// const sandboxKey = sandboxAPIKey;
 
-// console.log(sandboxURL);
+function shuffleAPI(array) {
+    let randomNo = Math.floor(Math.random() * array.length - 1 + 1)
+    return array[randomNo];
+}
 
+const sandboxKey = shuffleAPI(sandboxAPIKey);
+
+console.log(sandboxKey)
+
+// console.log(sandboxKey);
