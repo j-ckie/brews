@@ -17,3 +17,21 @@ async function getBeer() {
   // console.log(beerData)
 }
 getBeer();
+
+let searchBtn = document.getElementById("searchBtn");
+let searchBar = document.getElementById("searchBar");
+
+// search bar functionality
+
+let searchResult = [];
+
+searchBtn.addEventListener("click", () => {
+  for (i = 0; i < beerData.length; i++) {
+    if (searchBar.value === beerData[name]) {
+      console.log(beerData[abv]);
+      console.log(beerData[desc]);
+    } else {
+      console.log("Please select another beer");
+    }
+  }
+});
