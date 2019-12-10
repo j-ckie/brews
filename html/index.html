@@ -9,10 +9,10 @@
     <!-- favicon -->
     <link rel='icon' href='../img/favicon.ico' type='image/x-icon' />
     <!-- bootstrap link -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
     <!-- CSS link -->
-    <link rel="stylesheet" href="../style/style.css">
+    <!-- <link rel="stylesheet" href="../style/style.css"> -->
 </head>
 
 <body>
@@ -27,40 +27,36 @@
             -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
-                    <img src="../img/beers.svg" class="logo">BREWPEDIA</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="beer.html">Beers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Random</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Search</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Account</a>
-                        </li>
+                    <!-- <img src="../img/beers.svg" class="logo">BREWPEDIA</a> -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Beers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Random</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Search</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Account</a>
+                            </li>
 
-                    </ul>
-                </div>
+                        </ul>
+                    </div>
             </nav>
 
-            <div class="main row">
-                <!-- main content goes here -->
-                <!-- hero image -->
-                <!-- description about site? -->
-                <!-- random beer! -->
-                <!-- random beer info -->
-                <div id="landing" class="hero">
+            <div id="landing-page" class="hero" style="background-color: antiquewhite;">
+                <!-- default state: display-->
+                <div id="landing">
                     <h1>BREWPEDIA</h1>
                     <div class="search">
 
@@ -80,10 +76,59 @@
                 </div>
             </div>
 
-            <div class="footer row">
+            <div id="beer-info" style="background-color: cornflowerblue;">
+                <!-- hidden by default-->
+                <div class="beer-hero">
+
+                </div>
+                <div class="content">
+                    <div class="row">
+                        <div class="beer-label">
+                            <img src="" id="label" alt="Beer label" />
+                        </div>
+                        <div id="beer-info">
+                            <p>Name</p>
+                            <!-- <p>Brewery</p> If available -->
+                            <p>ABV</p>
+                            <p>Style</p>
+                            <p>Is Retired (y/n)</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="desc">
+                            <h3>Description</h3>
+                            <p id="beer-desc"></p>
+                        </div>
+                        <div id="beer-awards">
+                            <h3>Awards</h3>
+                            <ul id="awards">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="account" style="background-color: darkgrey;">
+                <!-- display on account click-->
+                <div class="login">
+                    <input type="text" placeholder="your@email.com" id="loginEmail" />
+                    <input type="password" placeholder="password" id="loginPw" />
+                    <button id="loginBtn">Login</button>
+                </div>
+                <div class="signup">
+                    <input type="text" placeholder="you@email.com" id="signupEmail" />
+                    <input type="password" placeholder="password" id="signupPw" />
+                    <input type="password" placeholder="confirm password" id="confPw" />
+                    <button id="signupBtn">Signup</button>
+
+                </div>
+            </div>
+
+
+            <!-- <div class="footer row">
                 <p>&copy; AG, JGL, ADS</p>
                 <p>All rights reserved</p>
-            </div>
+            </div> -->
         </div>
 
         <!-- bootstrap JS link -->
