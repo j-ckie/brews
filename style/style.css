@@ -10,7 +10,7 @@
 
 .header {
 
-    width: 100vw !important;
+    width: 100% !important;
 }
 
 .logo {
@@ -32,6 +32,13 @@
     text-align: center;
 }
 
+#beer-landing {
+    width: 100vw !important;
+}
+
+#label {
+    width: 20rem !important;
+}
 
 .footer {
     background-color: #343A40;
