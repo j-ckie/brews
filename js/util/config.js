@@ -1,14 +1,17 @@
-const prodKey = prodAPIKey.key;
+// const prodKey = prodAPIKey.key;
 
 // const sandboxKey = sandboxAPIKey;
 
-function shuffleAPI(array) {
-    let randomNo = Math.floor(Math.random() * array.length - 1 + 1)
-    return array[randomNo];
-}
+// function shuffleAPI(array) {
+//     let randomNo = Math.floor(Math.random() * array.length - 1 + 1)
+//     return array[randomNo];
+// }
 
-const sandboxKey = shuffleAPI(sandboxAPIKey);
+// const sandboxKey = shuffleAPI(sandboxAPIKey);
 
-console.log(sandboxKey)
+// console.log(sandboxKey)
 
 // console.log(sandboxKey);
+
+
+const sandboxKey = "https://sparkly-mailman.glitch.me/beers"
