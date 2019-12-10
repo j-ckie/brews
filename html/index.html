@@ -60,8 +60,8 @@
                     <h1>BREWPEDIA</h1>
                     <div class="search">
 
-                        <input type="text" placeholder="Enter name of brew..." />
-                        <button class="searchBtn">Submit</button>
+                        <input type="text" id='searchBar' placeholder="Enter name of brew..." />
+                        <button id="searchBtn">Submit</button>
                     </div>
                 </div>
                 <div class="content">
@@ -83,7 +83,7 @@
                 </div>
                 <div class="content">
                     <div class="row">
-                        <div class="beer-label">
+                        <div class="beerLabel">
                             <img src="" id="label" alt="Beer label" />
                         </div>
                         <div id="beer-info">
@@ -97,12 +97,10 @@
                     <div class="row">
                         <div class="desc">
                             <h3>Description</h3>
-                            <p id="beer-desc"></p>
+                            <p id="beerDesc"></p>
                         </div>
-                        <div id="beer-awards">
-                            <h3>Awards</h3>
-                            <ul id="awards">
-                            </ul>
+                        <div id="foodPairings">
+                            <h3>Food Pairings</h3>
                         </div>
                     </div>
                 </div>
@@ -159,6 +157,8 @@
         <script src="../js/breweries.js"></script>
         <script src="../js/random.js"></script>
         <script src="../js/util/users.js"></script>
+        <script src='../js/search.js'></script>
+
 
 </body>
 
