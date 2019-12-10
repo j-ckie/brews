@@ -12,5 +12,3 @@ async function getBeers(){
   
 }
 getBeers()
-
-

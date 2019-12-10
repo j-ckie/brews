@@ -1,0 +1,55 @@
+* {
+    margin: 0 !important;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 0 !important;
+    width: 100%;
+}
+
+.header {
+
+    width: 100% !important;
+}
+
+.logo {
+    width: 3rem;
+    margin-right: 1rem !important;
+}
+
+#landing {
+    width: 100%;
+    background-image: url("../img/beer-flight-hero-landing.jpg");
+    height: 90vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 5rem !important;
+    text-align: center;
+}
+
+#beer-landing {
+    width: 100vw !important;
+}
+
+#label {
+    width: 20rem !important;
+}
+
+.footer {
+    background-color: #343A40;
+    color: white;
+    position: absolute;
+    bottom: 0 !important;
+    width: 100% !important;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem !important;
+    
+}
