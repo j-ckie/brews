@@ -5,23 +5,19 @@ let searchBar = document.getElementById("searchBar");
 
 let searchResult = [];
 
-// function testPassInfo(data) {
-//   beer = data;
-// }
+function testPassInfo(data) {
+  beer = data;
+}
 
-// testPassInfo();
+testPassInfo();
 
 searchBtn.addEventListener("click", () => {
-  console.log(beer);
-  console.log(searchBar.value);
-
   for (i = 0; i < beer.length; i++) {
-    console.log("for loop executed");
-    if (searchBar.value === beer[i][name]) {
-      console.log(beer[abv]);
-      console.log(beer[desc]);
-    } else {
-      console.log("Please select another beer");
+    if (searchBar.value === beer[i].name) {
+      console.log(beer[i].name);
+      console.log(beer[i].abv);
+      console.log(beer[i].description);
+      console.log(beer[i].isRetired);
     }
   }
 });
