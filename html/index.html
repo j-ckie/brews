@@ -96,10 +96,33 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+
+        <!-- firebase links -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyC6_YAVkkrBKppE4FNotOecIMHGJdoUHkk",
+                authDomain: "brews-7701b.firebaseapp.com",
+                databaseURL: "https://brews-7701b.firebaseio.com",
+                projectId: "brews-7701b",
+                storageBucket: "brews-7701b.appspot.com",
+                messagingSenderId: "741818176617",
+                appId: "1:741818176617:web:e64c457d9b95b49b06fef8",
+                measurementId: "G-K2XY9MWYF9"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
+
         <!-- JS link -->
-        <script src="../js/secret.js"></script> <!-- Prod Key -->
-        <script src="../js/keys.js"></script> <!-- Sandbox Keys -->
-        <script src="../js/config.js"></script> <!-- Load basic config -->
+        <script src="../js/util/secret.js"></script> <!-- Prod Key -->
+        <script src="../js/util/keys.js"></script> <!-- Sandbox Keys -->
+        <script src="../js/util/config.js"></script> <!-- Load basic config -->
         <script src="../js/jackie-script.js"></script>
         <script src="../js/beers.js"></script>
 
