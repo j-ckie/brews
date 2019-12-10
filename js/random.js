@@ -10,17 +10,24 @@ randomBtn.addEventListener("click",()=>{
         
         let randomBeers = beerData[Math.floor(Math.random() * beerData.length)];
         if (randomBeers.labels == null){
-           let defaultLabel =  `<img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.syncron.com%2Fwp-content%2Fuploads%2F2017%2F03%2Fimg-placeholder.png&f=1&nofb=1">`
+           let defaultLabel =  `<img src= https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.syncron.com%2Fwp-content%2Fuploads%2F2017%2F03%2Fimg-placeholder.png&f=1&nofb=1>`
            return defaultLabel
         }else{
-            console.log(randomBeers.name) 
-            console.log(randomBeers.style.shortName)
-            console.log(randomBeers.labels.large)
+            let beerInfo = `<h2>${randomBeers.name}</h2>
+                            <div> ${randomBeers.style.shortName}</div>
+                            <img src=${randomBeers.labels.large}>`
+            return beerInfo                
+            // console.log(randomBeers.name) 
+            // console.log(randomBeers.style.shortName)
+            // console.log(randomBeers.labels.large)
 
         }
+        
     }
+    label.innerHTML = randomBeers
+    
     // label.innerHTML = randomBeers 
-    getRandomBeers()    
+    // getRandomBeers()    
 })
 
 
