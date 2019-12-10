@@ -41,7 +41,7 @@
                                 <a class="nav-link" href="#">Beers</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Random</a>
+                                <a class="nav-link" id="randomBtn">Random</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Search</a>
@@ -87,11 +87,11 @@
                             <img src="" id="label" alt="Beer label" />
                         </div>
                         <div id="beer-info">
-                            <p>Name</p>
+                            <p id="name">Name</p>
                             <!-- <p>Brewery</p> If available -->
-                            <p>ABV</p>
-                            <p>Style</p>
-                            <p>Is Retired (y/n)</p>
+                            <p id="abv">ABV</p>
+                            <p id="beerstyle">Style</p>
+                            <p id="isRetired">Is Retired (y/n)</p>
                         </div>
                     </div>
                     <div class="row">
@@ -131,6 +131,7 @@
             </div> -->
         </div>
 
+    
         <!-- bootstrap JS link -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -165,11 +166,13 @@
         </script>
 
         <!-- JS link -->
-        <script src="../js/util/secret.js"></script> <!-- Prod Key -->
+        <!-- <script src="../js/util/secret.js"></script> Prod Key -->
         <script src="../js/util/keys.js"></script> <!-- Sandbox Keys -->
         <script src="../js/util/config.js"></script> <!-- Load basic config -->
-        <script src="../js/jackie-script.js"></script>
+        <!-- <script src="../js/jackie-script.js"></script> -->
         <script src="../js/beers.js"></script>
+        <script src="../js/breweries.js"></script>
+        <script src="../js/random.js"></script>
 
 </body>
 
