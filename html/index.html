@@ -83,21 +83,21 @@
                 </div>
                 <div class="content">
                     <div class="row">
-                        <div class="beer-label">
+                        <div class="beerLabel">
                             <img src="" id="label" alt="Beer label" />
                         </div>
                         <div id="beer-info">
-                            <p>Name</p>
+                            <p id='beerName'>Name</p>
                             <!-- <p>Brewery</p> If available -->
-                            <p>ABV</p>
-                            <p>Style</p>
-                            <p>Is Retired (y/n)</p>
+                            <p id='abvNumber'>ABV</p>
+                            <p id='beerType'>Style</p>
+                            <p id='retireStatus'>Is Retired (y/n)</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="desc">
                             <h3>Description</h3>
-                            <p id="beer-desc"></p>
+                            <p id="beerDesc"></p>
                         </div>
                         <div id="beer-awards">
                             <h3>Awards</h3>
@@ -165,8 +165,6 @@
         </script>
 
         <!-- JS link -->
-        <script src="../js/util/keys.js"></script> <!-- Sandbox Keys -->
-        <script src="../js/util/config.js"></script> <!-- Load basic config -->
         <script src="../js/beers.js"></script>
         <script src="../js/search.js"></script>
 </body>

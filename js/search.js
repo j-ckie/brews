@@ -1,6 +1,10 @@
 let searchBtn = document.getElementById("searchBtn");
 let searchBar = document.getElementById("searchBar");
-let beerInfo = document.getElementById("beerInfo");
+let beerName = document.getElementById("beerName");
+let beerType = document.getElementById("beerType");
+let abvNumber = document.getElementById("abvNumber");
+let retireStatus = document.getElementById("retireStatus");
+let beerDesc = document.getElementById("beerDesc");
 
 // search bar functionality
 
@@ -15,13 +19,11 @@ testPassInfo();
 searchBtn.addEventListener("click", () => {
   for (i = 0; i < beer.length; i++) {
     if (searchBar.value === beer[i].name) {
-      console.log(beer[i].nameDisplay);
-      console.log(beer[i].abv);
-      console.log(beer[i].style.name);
-      console.log(beer[i].description);
-      console.log(beer[i].isRetired);
+      beerName.innerHTML = `Beer Name: ${beer[i].nameDisplay}`;
+      beerType.innerHTML = `Type of Beer: ${beer[i].style.name} `;
+      abvNumber.innerHTML = `Alc %: ${beer[i].abv}%`;
+      retireStatus.innerHTML = `Is Retired: ${beer[i].isRetired}`;
+      beerDesc.innerHTML = `Description ${beer[i].description}`;
     }
   }
 });
-
-// beerInfo.innerHTML = beer[i].nameDisplay;
