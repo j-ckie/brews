@@ -1,17 +1,14 @@
-// const prodKey = prodAPIKey.key;
+// const prodKey = prodAPIKey.key; // commenting this out for now to avoid uncaught reference error -JGL
 
 // const sandboxKey = sandboxAPIKey;
 
 // function shuffleAPI(array) {
-//     let randomNo = Math.floor(Math.random() * array.length - 1 + 1)
-//     return array[randomNo];
+//   let randomNo = Math.floor(Math.random() * array.length - 1 + 1);
+//   return array[randomNo];
 // }
 
-// const sandboxKey = shuffleAPI(sandboxAPIKey);
-
-// console.log(sandboxKey)
+const sandboxKey = "969c47b896fcbe4c5eb88f0e259f8bb1";
 
 // console.log(sandboxKey);
 
-
-const sandboxKey = "https://sparkly-mailman.glitch.me/beers"
+// console.log(sandboxKey);

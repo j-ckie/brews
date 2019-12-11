@@ -44,10 +44,10 @@
                                 <a class="nav-link" id="randomBtn">Random</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Search</a>
+                                <a class="nav-link" id="navSearch">Search</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Account</a>
+                                <a class="nav-link" id="navAcct">Account</a>
                             </li>
 
                         </ul>
@@ -60,8 +60,8 @@
                     <h1 id="logo">Brewpedia</h1>
                     <div class="search">
 
-                        <input type="text" placeholder="Enter name of brew..." />
-                        <button class="searchBtn">Submit</button>
+                        <input type="text" id='searchBar' placeholder="Enter name of brew..." />
+                        <button id="searchBtn">Submit</button>
                     </div>
                 </div>
                 <div class="content">
@@ -82,6 +82,7 @@
 
                 </div>
                 <div class="content">
+
                         <div class="row">
                             <div class="beer-label">
                                 <img src="" id="label" alt="Beer label" />
@@ -95,20 +96,26 @@
                             <p id="abv"></p>
                             <div class="styleTxt">Category</div>
                             <p id="beerstyle"></p>
-                            <div class="isRetTxt">Is Retired? (Y or N)</div>
-                            <p id="isRetired"></p>
+                            <div class="isRetTxt">Is Retired? (Y or N)
+                              <p id="isRetired"></p>
+                          </div>
+
                         </div>
+
+
                         </div>
                     <div class="row">
-                        <div class="desc">
+
+                        <div class="desc id="descInfo">
                             <hr>
                             <h3 class="prodDesc">Product Description</h3>
-                            <p id="beer-desc"></p>
+                            <p id="beerDesc"></p>
                         </div>
-                        <div id="beer-awards">
-                            <h3></h3>
-                            <ul id="awards">
-                            </ul>
+                   
+                        <div id="foodPairings">
+                            <h3 class="prodDesc">Food Pairings</h3>
+                            <p id="food-pairing-list"></p>
+
                         </div>
                     </div>
                 </div>
@@ -116,12 +123,15 @@
 
             <div id="account" style="background-color: darkgrey;">
                 <!-- display on account click-->
-                <div class="login">
+                <div id="login">
                     <input type="text" placeholder="your@email.com" id="loginEmail" />
                     <input type="password" placeholder="password" id="loginPw" />
                     <button id="loginBtn">Login</button>
                 </div>
-                <div class="signup">
+                <div id="logout">
+                    <button id="logoutBtn">Logout</button>
+                </div>
+                <div id="signup">
                     <input type="text" placeholder="you@email.com" id="signupEmail" />
                     <input type="password" placeholder="password" id="signupPw" />
                     <input type="password" placeholder="confirm password" id="confPw" />
@@ -130,14 +140,14 @@
                 </div>
             </div>
 
-
             <div class="footer row">
+
                 <p>&copy; AG, JGL, ADS</p>
                 <p>All rights reserved</p>
             </div> 
         </div>
 
-    
+
         <!-- bootstrap JS link -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -150,35 +160,28 @@
             crossorigin="anonymous"></script>
 
         <!-- firebase links -->
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+
+        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
-        <script>
-            // Your web app's Firebase configuration
-            var firebaseConfig = {
-                apiKey: "AIzaSyC6_YAVkkrBKppE4FNotOecIMHGJdoUHkk",
-                authDomain: "brews-7701b.firebaseapp.com",
-                databaseURL: "https://brews-7701b.firebaseio.com",
-                projectId: "brews-7701b",
-                storageBucket: "brews-7701b.appspot.com",
-                messagingSenderId: "741818176617",
-                appId: "1:741818176617:web:e64c457d9b95b49b06fef8",
-                measurementId: "G-K2XY9MWYF9"
-            };
-            // Initialize Firebase
-            firebase.initializeApp(firebaseConfig);
-            firebase.analytics();
-        </script>
+
+        <!-- Add Firebase products that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+
+        <script src="../js/util//fbacct.js"></script>
 
         <!-- JS link -->
         <!-- <script src="../js/util/secret.js"></script> Prod Key -->
-        <script src="../js/util/keys.js"></script> <!-- Sandbox Keys -->
-        <script src="../js/util/config.js"></script> <!-- Load basic config -->
-        <!-- <script src="../js/jackie-script.js"></script> -->
-        <script src="../js/beers.js"></script>
-        <script src="../js/breweries.js"></script>
-        <script src="../js/random.js"></script>
+        <!-- <script src="../js/util/config.js"></script> Load basic config -->
+        <script src="../js/index.js"></script>
+        <script src="../js/handlers/beers.js"></script>
+        <script src="../js/handlers/breweries.js"></script>
+        <script src='../js/handlers/search.js'></script>
+        <script src="../js/handlers/random.js"></script>
+        <script src="../js/handlers/users.js"></script>
+
+
 
 </body>
 

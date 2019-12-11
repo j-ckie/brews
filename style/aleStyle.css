@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Calistoga|Roboto|Satisfy&display=swap');
 
+
 /* .logo{
     font-family: 'Calistoga', cursive; 
 } */
@@ -16,15 +17,18 @@
     font-size: 50px;
 }
 
+
 #beer-info{
     padding: 6%;
    
 }
 .beer-label{
     background-color: #fff;
+
     /* margin-left: 10%; */
     padding-right: 10%;
     padding-left: 10%;
+
 }
 
 .abvTxt{
@@ -85,6 +89,8 @@ hr{
 #beerstyle{
     border: solid lightgray 1px;
 }
+
 .searchBtn{
     color: white;
 }
+
