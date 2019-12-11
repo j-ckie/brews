@@ -85,4 +85,6 @@ hr{
 #beerstyle{
     border: solid lightgray 1px;
 }
-
+.searchBtn{
+    color: white;
+}
