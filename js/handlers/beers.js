@@ -7,11 +7,17 @@ const fakesandboxURL = `${cors}https://sparkly-mailman.glitch.me/beers`;
 
 // let prodURL = `${cors}https://api.brewerydb.com/v2/${endpoint}/?key=${prodKey}`
 
-async function getBeer() {
-  let response = await fetch(fakesandboxURL);
-  let beer = await response.json();
-  console.log(beer);
-  testPassInfo(beer);
-}
+// async function getBeer() {
+//     let response = await fetch(fakesandboxURL);
+//     let beer = await response.json();
+//     console.log(beer);
+//     testPassInfo(beer);
+// }
 
-getBeer();
+// getBeer();
+
+
+
+
+
+// getBeer()
