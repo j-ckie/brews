@@ -33,14 +33,14 @@ const validateSignUpData = data => {
     };
 };
 
-signupBtn.addEventListener("click", (req, res) => { // req/res PROMISE
+signupBtn.addEventListener("click", (req, res) => {
     let newUser = {
         email: signupEm.value,
         password: signupPw.value,
         confirmPassword: confPw.value
     }
-    let test = validateSignUpData(newUser)
-    if (test.valid === true) {
+    let validData = validateSignUpData(newUser)
+    if (validData.valid === true) {
         console.log("true")
         firebase.auth().createUserWithEmailAndPassword(newUser.email, newUser.password).catch(function (error) {
             // Handle Errors here.
@@ -49,7 +49,7 @@ signupBtn.addEventListener("click", (req, res) => { // req/res PROMISE
             // ...
         });
     }
-    else console.log(test + " false")
+    else console.log(validData + " false")
 
 
 
