@@ -29,7 +29,7 @@ randomBtn.addEventListener("click",()=>{
             abv.innerHTML= randomBeers.abv
             beerstyle.innerHTML = randomBeers.style.shortName
             isRetired.innerHTML = randomBeers.isRetired
-            beerDesc.innerHTML = randomBeers.style.description
+            beerDesc.innerHTML = randomBeers.description
 
 
         } else if (randomBeers.labels === undefined){
@@ -39,7 +39,7 @@ randomBtn.addEventListener("click",()=>{
            abv.innerHTML= randomBeers.abv
            beerstyle.innerHTML = randomBeers.style.shortName
            isRetired.innerHTML = randomBeers.isRetired
-           beerDesc.innerHTML = randomBeers.style.description
+           beerDesc.innerHTML = randomBeers.description
 
         //    labels.src = defaultImg
          } //else {
