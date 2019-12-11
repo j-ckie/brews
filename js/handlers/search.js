@@ -46,9 +46,9 @@ searchBtn.addEventListener("click", () => {
             //     name: item.name
             // })
             if (searchData === item.name) {
-                beerName.innerHTML = item.name
-                beerStyle.innerHTML = item.style.name;
-                abv.innerHTML = `${item.abv}%`
+                beerName.innerHTML = `${item.name}`
+                beerStyle.innerHTML = `<b>Type</b> ${item.style.name}`;
+                abv.innerHTML = `<b>Abv</b> ${item.abv}%`
 
                 if (item.hasOwnProperty("labels")) {
                     label.src = item.labels.medium
@@ -70,8 +70,8 @@ searchBtn.addEventListener("click", () => {
                 }
 
                 if (item.isRetired != "Y") {
-                    isRetired.innerHTML = `Beer is still in production!`
-                } else { isRetired.innerHTML = `Beer is no longer in production` }
+                    isRetired.innerHTML = `<b>Status</b> Beer is still in production!`
+                } else { isRetired.innerHTML = `<b>Status</b> Beer is no longer available to purchase.` }
 
                 if (item.hasOwnProperty("foodPairings")) {
                     foodList.innerHTML = item.foodPairings
