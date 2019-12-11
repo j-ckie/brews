@@ -9,10 +9,10 @@
     <!-- favicon -->
     <link rel='icon' href='../img/favicon.ico' type='image/x-icon' />
     <!-- bootstrap link -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
     <!-- CSS link -->
-    <!-- <link rel="stylesheet" href="../style/style.css"> -->
+    <link rel="stylesheet" href="../style/style.css"> 
 </head>
 
 <body>
@@ -26,8 +26,8 @@
             - Account/signin/signup (if we have time)
             -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" href="#">
-                    <!-- <img src="../img/beers.svg" class="logo">BREWPEDIA</a> -->
+                <a class="navbar-brand" id="logoNav"  href="#">
+                    <img src="../img/beers.svg" class="logo">Brewpedia</a> 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -57,7 +57,7 @@
             <div id="landing-page" class="hero" style="background-color: antiquewhite;">
                 <!-- default state: display-->
                 <div id="landing">
-                    <h1>BREWPEDIA</h1>
+                    <h1 id="logo">Brewpedia</h1>
                     <div class="search">
 
                         <input type="text" id='searchBar' placeholder="Enter name of brew..." />
@@ -76,32 +76,46 @@
                 </div>
             </div>
 
-            <div id="beer-info" style="background-color: cornflowerblue;">
+            <div id="beer-info">
                 <!-- hidden by default-->
                 <div class="beer-hero">
 
                 </div>
                 <div class="content">
-                    <div class="row">
-                        <div class="beerLabel">
-                            <img src="" id="label" alt="Beer label" />
-                        </div>
+
+                        <div class="row">
+                            <div class="beer-label">
+                                <img src="" id="label" alt="Beer label" />
+                            </div>
+                        
                         <div id="beer-info">
-                            <h2 id="name">Name</h2>
-                            <!-- <p>Brewery</p> If available -->
-                            <p id="abv">ABV</p>
-                            <p id="beerstyle">Style</p>
-                            <p id="isRetired">Is Retired (y/n)</p>
+                            <div class="nameTxt"></div>
+                            <p id="name"></p>
+                                <!-- <p>Brewery</p> If available -->
+                            <div class="abvTxt">ABV</div>
+                            <p id="abv"></p>
+                            <div class="styleTxt">Category</div>
+                            <p id="beerstyle"></p>
+                            <div class="isRetTxt">Is Retired? (Y or N)
+                              <p id="isRetired"></p>
+                          </div>
+
                         </div>
-                    </div>
+
+
+                        </div>
                     <div class="row">
-                        <div class="desc" id="descInfo">
-                            <h3>Description</h3>
+
+                        <div class="desc id="descInfo">
+                            <hr>
+                            <h3 class="prodDesc">Product Description</h3>
                             <p id="beerDesc"></p>
                         </div>
+                   
                         <div id="foodPairings">
-                            <h3>Food Pairings</h3>
+                            <h3 class="prodDesc">Food Pairings</h3>
                             <p id="food-pairing-list"></p>
+
                         </div>
                     </div>
                 </div>
@@ -126,10 +140,11 @@
                 </div>
             </div>
 
-            <!-- <div class="footer row">
+            <div class="footer row">
+
                 <p>&copy; AG, JGL, ADS</p>
                 <p>All rights reserved</p>
-            </div> -->
+            </div> 
         </div>
 
 
