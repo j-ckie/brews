@@ -11,21 +11,26 @@ randomBtn.addEventListener("click", () => {
 
         let randomBeers = beers[Math.floor(Math.random() * beers.length)];
         // console.log(randomBeers)
-        // console.log(randomBeers.name)
+        console.log(randomBeers.name)
+        beerName.innerHTML = `${randomBeers.name}`
+        abv.innerHTML = randomBeers.abv
+        beerstyle.innerHTML = randomBeers.style.shortName
 
         if (randomBeers.hasOwnProperty("labels")) {
-            console.log("this has a label")
-            beerName.innerHTML = `${randomBeers.name}`
+            // console.log("this has a label")
+
             label.src = randomBeers.labels.medium
-            abv.innerHTML = randomBeers.abv
-            beerstyle.innerHTML = randomBeers.style.shortName
+
         } else if (randomBeers.labels === undefined) {
-            console.log("no image yet")
+            // console.log("no image yet")
             label.src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.frenchtoastsunday.com%2Fwp-content%2Fuploads%2F2015%2F02%2FBeer-icon-1.png&f=1&nofb=1"
         }
 
-
+        // if (randomBeers.name === undefined) {
+        //     getRandomBeers()
+        // }
         showBeerResults();
+        hideSearch()
     }
     getRandomBeers()
 });

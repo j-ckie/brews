@@ -7,6 +7,8 @@ const loginPw = document.getElementById("loginPw");
 const loginEm = document.getElementById("loginEmail");
 const loginBtn = document.getElementById("loginBtn");
 
+const navAcct = document.getElementById("navAcct");
+
 // regex to validate if data is an email
 const isEmail = email => {
     const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -94,4 +96,10 @@ loginBtn.addEventListener("click", (req, res) => {
             // ...
         });
     }
+})
+
+navAcct.addEventListener("click", () => {
+    hideSearch()
+    hideBeerResults()
+    showAccount()
 })

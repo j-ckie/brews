@@ -9,10 +9,11 @@
     <!-- favicon -->
     <link rel='icon' href='../img/favicon.ico' type='image/x-icon' />
     <!-- bootstrap link -->
-    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
-    <!-- CSS link -->
-    <!-- <link rel="stylesheet" href="../style/style.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+  <!-- CSS link -->
+<link rel="stylesheet" href="../style/style.css">
+<link rel="stylesheet" href="../style/aleStyle.css">
 </head>
 
 <body>
@@ -27,7 +28,7 @@
             -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" href="#">
-                    <!-- <img src="../img/beers.svg" class="logo">BREWPEDIA</a> -->
+                    <img src="../img/beers.svg" class="logo">BREWPEDIA</a> 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -44,10 +45,10 @@
                                 <a class="nav-link" id="randomBtn">Random</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="navSearch">Search</a>
+                                <a class="nav-link" href="#">Search</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" id="navAcct">Account</a>
+                                <a class="nav-link" href="#">Account</a>
                             </li>
 
                         </ul>
@@ -60,8 +61,8 @@
                     <h1>BREWPEDIA</h1>
                     <div class="search">
 
-                        <input type="text" id='searchBar' placeholder="Enter name of brew..." />
-                        <button id="searchBtn">Submit</button>
+                        <input type="text" placeholder="Enter name of brew..." />
+                        <button class="searchBtn">Submit</button>
                     </div>
                 </div>
                 <div class="content">
@@ -76,32 +77,39 @@
                 </div>
             </div>
 
-            <div id="beer-info" style="background-color: cornflowerblue;">
+            <div id="beer-info">
                 <!-- hidden by default-->
                 <div class="beer-hero">
 
                 </div>
                 <div class="content">
                     <div class="row">
-                        <div class="beerLabel">
+                        <div class="beer-label">
                             <img src="" id="label" alt="Beer label" />
                         </div>
-                        <div id="beer-info">
-                            <h2 id="name">Name</h2>
+                    
+                    <div id="beer-info">
+                        <div class="nameTxt"></div>
+                        <p id="name"></p>
                             <!-- <p>Brewery</p> If available -->
-                            <p id="abv">ABV</p>
-                            <p id="beerstyle">Style</p>
-                            <p id="isRetired">Is Retired (y/n)</p>
-                        </div>
+                        <div class="abvTxt">ABV</div>
+                        <p id="abv"></p>
+                        <div class="styleTxt">Category</div>
+                        <p id="beerstyle"></p>
+                        <div class="isRetTxt">Is Retired? (Y or N)</div>
+                        <p id="isRetired"></p>
+                    </div>
                     </div>
                     <div class="row">
-                        <div class="desc" id="descInfo">
-                            <h3>Description</h3>
-                            <p id="beerDesc"></p>
+                        <div class="desc">
+                            <hr>
+                            <h3 class="prodDesc">Product Description</h3>
+                            <p id="beer-desc"></p>
                         </div>
-                        <div id="foodPairings">
-                            <h3>Food Pairings</h3>
-                            <p id="food-pairing-list"></p>
+                        <div id="beer-awards">
+                            <h3></h3>
+                            <ul id="awards">
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -109,27 +117,28 @@
 
             <div id="account" style="background-color: darkgrey;">
                 <!-- display on account click-->
-                <div class="login">
+                 <div class="login">
                     <input type="text" placeholder="your@email.com" id="loginEmail" />
                     <input type="password" placeholder="password" id="loginPw" />
                     <button id="loginBtn">Login</button>
-                </div>
-                <div class="signup">
+                </div> 
+                 <div class="signup">
                     <input type="text" placeholder="you@email.com" id="signupEmail" />
                     <input type="password" placeholder="password" id="signupPw" />
                     <input type="password" placeholder="confirm password" id="confPw" />
                     <button id="signupBtn">Signup</button>
 
-                </div>
-            </div>
+                </div> 
+            </div> 
 
-            <!-- <div class="footer row">
+
+             <div class="footer row">
                 <p>&copy; AG, JGL, ADS</p>
                 <p>All rights reserved</p>
-            </div> -->
+            </div> 
         </div>
 
-
+    
         <!-- bootstrap JS link -->
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
             integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -142,28 +151,35 @@
             crossorigin="anonymous"></script>
 
         <!-- firebase links -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
-
-        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
-
-        <!-- Add Firebase products that you want to use -->
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
-
-        <script src="../js/util//fbacct.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+                apiKey: "AIzaSyC6_YAVkkrBKppE4FNotOecIMHGJdoUHkk",
+                authDomain: "brews-7701b.firebaseapp.com",
+                databaseURL: "https://brews-7701b.firebaseio.com",
+                projectId: "brews-7701b",
+                storageBucket: "brews-7701b.appspot.com",
+                messagingSenderId: "741818176617",
+                appId: "1:741818176617:web:e64c457d9b95b49b06fef8",
+                measurementId: "G-K2XY9MWYF9"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+        </script>
 
         <!-- JS link -->
         <!-- <script src="../js/util/secret.js"></script> Prod Key -->
-        <!-- <script src="../js/util/config.js"></script> Load basic config -->
-        <script src="../js/index.js"></script>
-        <script src="../js/handlers/beers.js"></script>
-        <script src="../js/handlers/breweries.js"></script>
-        <script src='../js/handlers/search.js'></script>
-        <script src="../js/handlers/random.js"></script>
-        <script src="../js/handlers/users.js"></script>
-
-
+        <script src="../js/util/keys.js"></script> <!-- Sandbox Keys -->
+        <script src="../js/util/config.js"></script> <!-- Load basic config -->
+        <!-- <script src="../js/jackie-script.js"></script> -->
+        <script src="../js/beers.js"></script>
+        <script src="../js/breweries.js"></script>
+        <script src="../js/random.js"></script>
 
 </body>
 
