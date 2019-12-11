@@ -7,7 +7,11 @@ const loginPw = document.getElementById("loginPw");
 const loginEm = document.getElementById("loginEmail");
 const loginBtn = document.getElementById("loginBtn");
 
+const logoutBtn = document.getElementById("logoutBtn");
+
 const navAcct = document.getElementById("navAcct");
+
+let loggedIn;
 
 // regex to validate if data is an email
 const isEmail = email => {
@@ -79,24 +83,53 @@ signupBtn.addEventListener("click", (req, res) => {
 
 // login user
 loginBtn.addEventListener("click", (req, res) => {
-    let user = {
-        email: loginEm.value,
-        password: loginPw.value
-    };
+    function login() {
 
-    let validData = validateLoginData(user);
-
-    // if (!validData) console.log("Something happened")
-    if (validData.valid === true) {
-        // console.log("TRUE")
-        firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {
-            // Handle Errors here.
-            var errorCode = error.code;
-            var errorMessage = error.message;
-            // ...
-        });
+        let user = {
+            email: loginEm.value,
+            password: loginPw.value
+        };
+        let validData = validateLoginData(user);
+        // if (!validData) console.log("Something happened")
+        if (validData.valid === true) {
+            // console.log("TRUE")
+            firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {
+                // Handle Errors here.
+                var errorCode = error.code;
+                var errorMessage = error.message;
+                // ...
+            });
+            loggedIn = true;
+            // console.log(loggedIn)
+            hideLogin()
+            hideSignup()
+            // return loggedIn;
+        }
+        console.log(loggedIn)
+        return loggedIn;
     }
+    login()
+    showLogout()
 })
+
+logoutBtn.addEventListener("click", (req, res) => {
+    firebase
+        .auth()
+        .signOut()
+        .then(() => {
+        }).catch((err) => {
+
+        })
+    showLogin();
+    showSignup();
+    hideLogout();
+    loggedIn = false;
+    console.log(loggedIn)
+    return loggedIn
+})
+
+
+
 
 navAcct.addEventListener("click", () => {
     hideSearch()
