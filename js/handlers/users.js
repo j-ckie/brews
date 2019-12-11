@@ -91,7 +91,7 @@ loginBtn.addEventListener("click", (req, res) => {
         };
         let validData = validateLoginData(user);
         // if (!validData) console.log("Something happened")
-        if (validData.valid === true) {
+        if (validData.valid == true) {
             // console.log("TRUE")
             firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {
                 // Handle Errors here.
@@ -104,9 +104,14 @@ loginBtn.addEventListener("click", (req, res) => {
             hideLogin()
             hideSignup()
             // return loggedIn;
+            console.log(loggedIn)
+            return loggedIn;
+        } else if (validData.valid === false) {
+            console.log('there was a problem')
+            loggedIn = false;
+            console.log(loggedIn)
         }
-        console.log(loggedIn)
-        return loggedIn;
+
     }
     login()
     showLogout()
