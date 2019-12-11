@@ -10,11 +10,5 @@ const showBeerResults = () => {
     document.getElementById("beer-info").style.display = "block"
 }
 
-const testShow = document.getElementById("test-functions-show");
-
-testShow.addEventListener("click", () => {
-    showBeerResults()
-})
-
 hideBeerResults();
 hideAccount();

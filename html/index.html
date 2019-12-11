@@ -87,7 +87,7 @@
                             <img src="" id="label" alt="Beer label" />
                         </div>
                         <div id="beer-info">
-                            <p id="name">Name</p>
+                            <h2 id="name">Name</h2>
                             <!-- <p>Brewery</p> If available -->
                             <p id="abv">ABV</p>
                             <p id="beerstyle">Style</p>
@@ -95,12 +95,13 @@
                         </div>
                     </div>
                     <div class="row">
-                        <div class="desc">
+                        <div class="desc" id="descInfo">
                             <h3>Description</h3>
                             <p id="beerDesc"></p>
                         </div>
                         <div id="foodPairings">
                             <h3>Food Pairings</h3>
+                            <p id="food-pairing-list"></p>
                         </div>
                     </div>
                 </div>
@@ -160,12 +161,13 @@
         <!-- JS link -->
         <!-- <script src="../js/util/secret.js"></script> Prod Key -->
         <!-- <script src="../js/util/config.js"></script> Load basic config -->
+        <script src="../js/index.js"></script>
         <script src="../js/handlers/beers.js"></script>
         <script src="../js/handlers/breweries.js"></script>
-        <script src="../js/handlers/random.js"></script>
         <script src='../js/handlers/search.js'></script>
+        <script src="../js/handlers/random.js"></script>
         <script src="../js/handlers/users.js"></script>
-        <script src="../js/index.js"></script>
+
 
 
 </body>
