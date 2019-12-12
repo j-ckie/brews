@@ -65,8 +65,6 @@ firebase.auth().onAuthStateChanged(function (user) {
         // User is signed in.
         var email = user.email;
 
-
-
         hideLogin()
         hideSignup()
         showLogout()
@@ -132,8 +130,6 @@ loginBtn.addEventListener("click", (req, res) => {
 
 })
 
-
-
 logoutBtn.addEventListener("click", (req, res) => {
     firebase
         .auth()
@@ -146,9 +142,6 @@ logoutBtn.addEventListener("click", (req, res) => {
     showSignup();
     hideLogout();
 })
-
-
-
 
 navAcct.addEventListener("click", () => {
     hideSearch()

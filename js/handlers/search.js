@@ -71,4 +71,5 @@ searchBtn.addEventListener("click", () => {
         })
     }
     getBeer()
+    hideBeerResults()
 });

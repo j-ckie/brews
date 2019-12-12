@@ -1,5 +1,5 @@
 const hideBeerResults = () => {
-    document.getElementById("beer-info").style.display = "none";
+    document.getElementById("beer-results").style.display = "none";
 }
 
 const hideAccount = () => {
@@ -12,7 +12,7 @@ const hideSearch = () => {
 }
 
 const showBeerResults = () => {
-    document.getElementById("beer-info").style.display = "block";
+    document.getElementById("beer-results").style.display = "block";
     // showHeroImg();
 }
 
