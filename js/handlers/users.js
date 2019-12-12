@@ -11,7 +11,7 @@ const logoutBtn = document.getElementById("logoutBtn");
 
 const navAcct = document.getElementById("navAcct");
 
-let loggedIn;
+let showError = document.getElementById("error-message");
 
 // regex to validate if data is an email
 const isEmail = email => {
@@ -59,6 +59,24 @@ const validateLoginData = data => {
     };
 }
 
+// watches login status
+firebase.auth().onAuthStateChanged(function (user) {
+    if (user) {
+        // User is signed in.
+        var email = user.email;
+
+        hideLogin()
+        hideSignup()
+        showLogout()
+
+    } else {
+        // User is signed out.
+        // ..
+        // console.log("user signed out");
+        showLogin()
+        showSignup()
+    }
+});
 
 // sign up user on button click -> similar logic for login 
 signupBtn.addEventListener("click", (req, res) => {
@@ -89,32 +107,27 @@ loginBtn.addEventListener("click", (req, res) => {
             email: loginEm.value,
             password: loginPw.value
         };
-        let validData = validateLoginData(user);
+        // let validData = validateLoginData(user);
         // if (!validData) console.log("Something happened")
-        if (validData.valid == true) {
-            // console.log("TRUE")
-            firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {
-                // Handle Errors here.
-                var errorCode = error.code;
-                var errorMessage = error.message;
-                // ...
-            });
-            loggedIn = true;
-            // console.log(loggedIn)
-            hideLogin()
-            hideSignup()
-            // return loggedIn;
-            console.log(loggedIn)
-            return loggedIn;
-        } else if (validData.valid === false) {
-            console.log('there was a problem')
-            loggedIn = false;
-            console.log(loggedIn)
-        }
+        // if (validData.valid === true) {
+        // console.log("TRUE")
+        firebase.auth().signInWithEmailAndPassword(user.email, user.password).catch(function (error) {
+            // Handle Errors here.
+            var errorCode = error.code;
+            var errorMessage = error.message;
+
+            // console.log(errorMessage)
+            showErrorMsg()
+            showError.innerHTML = `Error code: ${errorCode}. ${errorMessage}`;
+            // ...
+        });
+
+        // return loggedIn;
+        // }
 
     }
     login()
-    showLogout()
+
 })
 
 logoutBtn.addEventListener("click", (req, res) => {
@@ -128,13 +141,7 @@ logoutBtn.addEventListener("click", (req, res) => {
     showLogin();
     showSignup();
     hideLogout();
-    loggedIn = false;
-    console.log(loggedIn)
-    return loggedIn
 })
-
-
-
 
 navAcct.addEventListener("click", () => {
     hideSearch()
