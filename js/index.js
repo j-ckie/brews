@@ -12,7 +12,8 @@ const hideSearch = () => {
 }
 
 const showBeerResults = () => {
-    document.getElementById("beer-info").style.display = "block"
+    document.getElementById("beer-info").style.display = "block";
+    // showHeroImg();
 }
 
 const showAccount = () => {
@@ -47,7 +48,14 @@ const showLogout = () => {
     logoutBtn.style.display = "block"
 }
 
+const hideErrorMsg = () => {
+    document.getElementById("error-message").style.display = "none"
+}
 
+const showErrorMsg = () => {
+    document.getElementById("error-message").style.display = "block"
+}
 
 hideBeerResults();
 hideAccount();
+hideErrorMsg();
