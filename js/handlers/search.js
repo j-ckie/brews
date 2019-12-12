@@ -8,7 +8,7 @@ let beerDesc = document.getElementById("beerDesc");
 let foodPairings = document.getElementById("foodPairings");
 let foodList = document.getElementById("food-pairing-list")
 let label = document.getElementById("label");
-
+let desc = document.getElementById("descInfo")
 let navSearch = document.getElementById("navSearch");
 
 navSearch.addEventListener("click", () => {
@@ -49,8 +49,6 @@ searchBtn.addEventListener("click", () => {
                     // console.log("DESC PASS")
                 } else if (item.description === undefined) {
                     // console.log("FAIL")
-
-                    let desc = document.getElementById("descInfo")
 
                     desc.style.display = "none";
                 }

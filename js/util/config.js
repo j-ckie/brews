@@ -2,13 +2,13 @@ const prodKey = prodAPIKey.key; // commenting this out for now to avoid uncaught
 
 const sandboxKey = "969c47b896fcbe4c5eb88f0e259f8bb1";
 
-let endpoint = "beers"
+// let endpoint = "beers"
 
 const cors = "https://cors-anywhere.herokuapp.com/";
 
 const fakesandboxURL = `${cors}https://sparkly-mailman.glitch.me/beers`;
 
-const prodURL = `${cors}https://api.brewerydb.com/v2/${endpoint}/?key=${prodKey}`
+// const prodURL = `${cors}https://api.brewerydb.com/v2/${endpoint}/?key=${prodKey}`
 
 // const sandboxKey = sandboxAPIKey;
 
