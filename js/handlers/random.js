@@ -6,8 +6,11 @@ let beerInfo = document.getElementById("beer-info") // remove
 
 randomBtn.addEventListener("click", () => {
     async function getRandomBeers() {
-        let response = await fetch(fakesandboxURL)
-        let beers = await response.json()
+        let response = await fetch(prodURL)
+        let beersData = await response.json()
+        let beers = beersData.data
+
+        console.log(beers)
 
         let randomBeers = beers[Math.floor(Math.random() * beers.length)];
         // console.log(randomBeers)
