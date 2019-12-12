@@ -44,7 +44,7 @@
 .footer {
     background-color: #343A40;
     color: white;
-    position: absolute;
+    /* position: absolute; */
     bottom: 0 !important;
     width: 100% !important;
     display: flex;
@@ -113,7 +113,7 @@
     font-size: 20px;
 }
 #name{
-    color: orangered;
+    color:#FA743E;
     font-weight: bold;
     font-size: 24px;
     font-family: 'Calistoga', cursive;
@@ -145,4 +145,8 @@ hr{
 }
 .searchBtn{
     color: white;
+}
+/* Fav Heart button */
+#heartLike{
+    font-size: 30px;
 }
