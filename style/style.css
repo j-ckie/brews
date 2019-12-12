@@ -84,7 +84,7 @@ html {
 }
 
 #beer-info{
-    padding: 6%;
+    padding-left: 5%;
    
 }
 .beer-label{
@@ -116,8 +116,8 @@ html {
 .desc{
     /* background-color: rgb(71, 71, 71); */
     color: rgb(59, 59, 59);
-    padding-left: 3%;
-    padding-right: 3%;
+    padding-left: 6%;
+    padding-right: 6%;
     font-family: 'Roboto', sans-serif!important;
     font-size: 20px;
 }
@@ -126,6 +126,7 @@ html {
     font-weight: bold;
     font-size: 24px;
     font-family: 'Calistoga', cursive;
+    text-align: center;
     
 
 }
@@ -145,10 +146,26 @@ hr{
     border: solid lightgray 1px;
 }
 
-.searchBtn{
+#searchBtn{
     color: white;
+    background-color: coral;
+    border: none;
+    border-radius: 5px;
 }
 /* Fav Heart button */
 #heartLike{
-    font-size: 30px;
+    font-size: 25px;
+    background: none;
+    border: none;
+}
+.beerLabels{
+    max-width: 20rem;
+}
+.row{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 5%;
+    margin-right: 2%;
 }
