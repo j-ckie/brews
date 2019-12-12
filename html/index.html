@@ -10,9 +10,9 @@
     <link rel='icon' href='../img/favicon.ico' type='image/x-icon' />
     <!-- bootstrap link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> 
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS link -->
-    <link rel="stylesheet" href="../style/style.css"> 
+    <link rel="stylesheet" href="../style/style.css">
 </head>
 
 <body>
@@ -26,32 +26,32 @@
             - Account/signin/signup (if we have time)
             -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-                <a class="navbar-brand" id="logoNav"  href="#">
-                    <img src="../img/beers.svg" class="logo">Brewpedia</a> 
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Beers</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="randomBtn">Random</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="navSearch">Search</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="navAcct">Account</a>
-                            </li>
+                <a class="navbar-brand" id="logoNav" href="index.html">
+                    <img src="../img/beers.svg" class="logo">Brewpedia</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Beers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="randomBtn">Random</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navSearch">Search</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" id="navAcct">Account</a>
+                        </li>
 
-                        </ul>
-                    </div>
+                    </ul>
+                </div>
             </nav>
 
             <div id="landing-page" class="hero" style="background-color: antiquewhite;">
@@ -78,40 +78,39 @@
 
             <div id="beer-info">
                 <!-- hidden by default-->
-                <div class="beer-hero">
-
-                </div>
                 <div class="content">
 
-                        <div class="row">
-                            <div class="beer-label">
-                                <img src="" id="label" alt="Beer label" />
-                            </div>
-                        
+                    <div class="row">
+                        <div id="beer-landing"></div>
+                        <div class="beer-label">
+                            <img src="" id="label" alt="Beer label" />
+                        </div>
+
                         <div id="beer-info">
                             <div class="nameTxt"></div>
                             <p id="name"></p>
-                                <!-- <p>Brewery</p> If available -->
+                            <!-- <p>Brewery</p> If available -->
                             <div class="abvTxt">ABV</div>
-                            <p id="abv"></p>
+                            <p id="abv" class="infoText"></p>
                             <div class="styleTxt">Category</div>
-                            <p id="beerstyle"></p>
+                            <p id="beerstyle" class="infoText"></p>
                             <div class="isRetTxt">Is Retired? (Y or N)
-                              <p id="isRetired"></p>
-                          </div>
+
+                            </div>
+                            <p id="isRetired" class="infoText"></p>
 
                         </div>
 
 
-                        </div>
+                    </div>
                     <div class="row">
 
-                        <div class="desc id="descInfo">
+                        <div class="desc" id="descInfo">
                             <hr>
                             <h3 class="prodDesc">Product Description</h3>
                             <p id="beerDesc"></p>
                         </div>
-                   
+
                         <div id="foodPairings">
                             <h3 class="prodDesc">Food Pairings</h3>
                             <p id="food-pairing-list"></p>
@@ -121,7 +120,7 @@
                 </div>
             </div>
 
-            <div id="account" style="background-color: darkgrey;">
+            <div id="account">
                 <!-- display on account click-->
                 <div id="login">
                     <input type="text" placeholder="your@email.com" id="loginEmail" />
@@ -136,16 +135,25 @@
                     <input type="password" placeholder="password" id="signupPw" />
                     <input type="password" placeholder="confirm password" id="confPw" />
                     <button id="signupBtn">Signup</button>
-
                 </div>
+                <p id="error-message"></p>
             </div>
 
-            <div class="footer row">
+            <div class="account-info">
+                <h1 id="welcomeUser"></h1>
+                <ul id="beerFavs"></ul>
+            </div>
+
+            <!-- <div class="footer col-12">
 
                 <p>&copy; AG, JGL, ADS</p>
                 <p>All rights reserved</p>
-            </div> 
+            </div> -->
+
+
+
         </div>
+
 
 
         <!-- bootstrap JS link -->

@@ -28,8 +28,9 @@ randomBtn.addEventListener("click", () => {
 
         if (randomBeers.hasOwnProperty("description")) {
             beerDesc.innerHTML = randomBeers.description
+            document.getElementById("descInfo").style.display = "block"
         } else if (randomBeers.description === undefined) {
-            document.getElementById("descInfo").style.display = "none"
+            document.getElementById("descInfo").style.display = "none";
         }
 
         if (randomBeers.hasOwnProperty("foodPairings")) {

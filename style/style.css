@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100vh;
+}
+
 .container {
     padding: 0 !important;
-    width: 100%;
+    width: 100% !important;
+    height: 100vh !important;
 }
 
 .header {
@@ -17,6 +22,10 @@
 .logo {
     width: 3rem;
     margin-right: 1rem !important;
+}
+
+#accountStein {
+    width: 90vw;
 }
 
 #landing {
@@ -41,19 +50,22 @@
     width: 20rem !important;
 }
 
-.footer {
-    background-color: #343A40;
-    color: white;
-    position: absolute;
-    bottom: 0 !important;
-    width: 100% !important;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem !important;
-    
+#account {
+    padding: 3rem 0;
+    height: 100% !important;
+    background-color: #64798a;
 }
+
+/* .footer {
+    margin-top: 1rem;
+    position: fixed;
+    bottom: 0;
+    background-color: #333A40;
+    color: white;
+    text-align: center;
+    width: 100% !important;
+    padding: 1rem;
+} */
 /* Ale style */
 
 
@@ -132,17 +144,10 @@ hr{
     border-color: rgb(53, 53, 53);
     /* border-width: 2px; */
 }
-#abv{
+.infoText {
     border: solid lightgray 1px;
 }
 
-#isRetired{
-    border: solid lightgray 1px;
-
-}
-#beerstyle{
-    border: solid lightgray 1px;
-}
 .searchBtn{
     color: white;
 }
