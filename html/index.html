@@ -38,9 +38,6 @@
                             <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Beers</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" id="randomBtn">Random</a>
                         </li>
                         <li class="nav-item">
@@ -76,49 +73,47 @@
                 </div>
             </div>
 
-            <div id="beer-info">
-                <!-- hidden by default-->
-                <div class="content">
 
-                    <div class="row">
-                        <div id="beer-landing"></div>
-                        <div class="beer-label">
-                            <img src="" id="label" alt="Beer label" />
-                        </div>
+            <!-- hidden by default-->
+            <div class="content" id="beer-results">
 
-                        <div id="beer-info">
-                            <div class="nameTxt"></div>
-                            <p id="name"></p>
-                            <!-- <p>Brewery</p> If available -->
-                            <div class="abvTxt">ABV</div>
-                            <p id="abv" class="infoText"></p>
-                            <div class="styleTxt">Category</div>
-                            <p id="beerstyle" class="infoText"></p>
-                            <div class="isRetTxt">Is Retired? (Y or N)
+                <div class="row">
+                    <div id="beer-landing"></div>
+                    <div class="beer-label">
+                        <img src="" id="label" alt="Beer label" />
+                    </div>
 
-                            </div>
-                            <p id="isRetired" class="infoText"></p>
+                    <div id="beer-info">
+                        <div class="nameTxt"></div>
+                        <p id="name"></p>
+                        <!-- <p>Brewery</p> If available -->
+                        <div class="abvTxt">ABV</div>
+                        <p id="abv" class="infoText"></p>
+                        <div class="styleTxt">Category</div>
+                        <p id="beerstyle" class="infoText"></p>
+                        <div class="isRetTxt">Is Retired? (Y or N)
 
                         </div>
-
+                        <p id="isRetired" class="infoText"></p>
 
                     </div>
-                    <div class="row">
+                </div>
+                <div class="row">
 
-                        <div class="desc" id="descInfo">
-                            <hr>
-                            <h3 class="prodDesc">Product Description</h3>
-                            <p id="beerDesc"></p>
-                        </div>
+                    <div class="desc" id="descInfo">
+                        <hr>
+                        <h3 class="prodDesc">Product Description</h3>
+                        <p id="beerDesc"></p>
+                    </div>
 
-                        <div id="foodPairings">
-                            <h3 class="prodDesc">Food Pairings</h3>
-                            <p id="food-pairing-list"></p>
+                    <div id="foodPairings">
+                        <h3 class="prodDesc">Food Pairings</h3>
+                        <p id="food-pairing-list"></p>
 
-                        </div>
                     </div>
                 </div>
             </div>
+
 
             <div id="account">
                 <!-- display on account click-->
@@ -139,9 +134,10 @@
                 <p id="error-message"></p>
             </div>
 
-            <div class="account-info">
+            <div id="account-info">
                 <h1 id="welcomeUser"></h1>
-                <ul id="beerFavs"></ul>
+                <ul id="beerFavs">
+                </ul>
             </div>
 
             <!-- <div class="footer col-12">
