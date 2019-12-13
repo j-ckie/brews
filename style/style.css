@@ -139,6 +139,7 @@ hr{
     background-color: #FA743E;
     border: none;
     border-radius: 5px;
+    margin-top: 2%;
 }
 /* Fav Heart button */
 #heartLike{
@@ -156,7 +157,7 @@ hr{
     /* flex-wrap: wrap; */
     /* align-items: center; */
     margin-top: 5%;
-    margin-right: 2%;
+    margin-right: 10%;
     justify-content: space-evenly;
 }
 
@@ -168,7 +169,11 @@ hr{
     .beer-label {
         width: 10rem;
         padding: 0 !important;
+       
         
+    }
+    .row{
+        margin-right: 10%;
     }
     .content{
         background-color: white;
@@ -188,14 +193,7 @@ hr{
     body{
         background-color:rgb(255, 185, 80);
     }
-    .row{
-        margin-left: -10%;
-        margin-right: 6%;
-    /* }
-    #heartLike{
-        /* padding-left:10%; */
-        
-    }  */
+ 
     .desc{
         padding-left:13%;
         padding-right: 3%;
@@ -203,9 +201,9 @@ hr{
     #name{
         padding-top: 10%;
     }
-    /* #beer-info{
-        padding-left: 11%;
-    } */
+    #searchBtn{
+        margin-top: 0;}
+    
 
 
 }
