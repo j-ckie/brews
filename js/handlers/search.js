@@ -10,7 +10,7 @@ let foodList = document.getElementById("food-pairing-list")
 let label = document.getElementById("label");
 let desc = document.getElementById("descInfo")
 let navSearch = document.getElementById("navSearch");
-
+let styleDesc = document.getElementById("beerStyleDesc")
 
 let parameter; // random
 
@@ -22,57 +22,52 @@ navSearch.addEventListener("click", () => {
 })
 // search bar functionality
 
-let searchResult = [];
 
 searchBtn.addEventListener("click", () => {
+    endpoint = "beers"
+    let beerInput = searchBar.value;
+    // console.log(beerInput)
+    let singleSearchValue = beerInput.replace(/ /g, "+");
 
-    let searchData = searchBar.value
+    // console.log(singleSearchValue);
 
-    async function getBeer() {
-        let response = await fetch(fakesandboxURL);
-        let beer = await response.json();
+    async function findSingleBeer() {
+        let sandboxURL = `${cors}https://api.brewerydb.com/v2/${endpoint}/?key=${prodKey}&name=${singleSearchValue}`
+        let response = await fetch(sandboxURL);
+        let beerData = await response.json();
+        let beer = beerData.data[0];
 
-        beer.forEach(item => {
-            // console.log({
-            //     name: item.name
-            // })
-            if (searchData === item.name) {
-                beerName.innerHTML = `${item.name}`
-                beerStyle.innerHTML = `<b>Type</b> ${item.style.name}`;
-                abv.innerHTML = `<b>Abv</b> ${item.abv}%`
+        // console.log(beer);
 
-                if (item.hasOwnProperty("labels")) {
-                    label.src = item.labels.medium
-                    // console.log("THIS IS A TEST")
-                } else if (item.labels === undefined) {
-                    // console.log("FAIL")
-                    label.src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.frenchtoastsunday.com%2Fwp-content%2Fuploads%2F2015%2F02%2FBeer-icon-1.png&f=1&nofb=1"
-                }
+        beerName.innerHTML = beer.name;
+        abv.innerHTML = beer.abv;
+        beerStyle.innerHTML = beer.style.shortName;
+        styleDesc.innerHTML = beer.style.description
 
-                if (item.hasOwnProperty("description")) {
-                    beerDesc.innerHTML = item.description
-                    // console.log("DESC PASS")
-                } else if (item.description === undefined) {
-                    // console.log("FAIL")
+        if (beer.hasOwnProperty("labels")) {
+            label.src = beer.labels.medium;
+        } else if (beer.labels === undefined) {
+            label.src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.frenchtoastsunday.com%2Fwp-content%2Fuploads%2F2015%2F02%2FBeer-icon-1.png&f=1&nofb=1"
+        }
 
-                    desc.style.display = "none";
-                }
+        if (beer.hasOwnProperty("description")) {
+            beerDesc.innerHTML = beer.description;
+            document.getElementById("descInfo").style.display = "block";
+        } else if (beer.description === undefined) {
+            document.getElementById("descInfo").style.display = "none";
+        }
 
-                if (item.isRetired != "Y") {
-                    isRetired.innerHTML = `<b>Status</b> Beer is still in production!`
-                } else { isRetired.innerHTML = `<b>Status</b> Beer is no longer available to purchase.` }
+        if (beer.hasOwnProperty("foodPairings")) {
+            foodList.innerHTML = beer.foodList;
+            document.getElementById("foodPairings").style.display = "block";
+        } else if (beer.foodPairings === undefined) {
+            document.getElementById("foodPairings").style.display = "none";
+            // console.log("FAIL")
+        }
 
-                if (item.hasOwnProperty("foodPairings")) {
-                    foodList.innerHTML = item.foodPairings
-                } else if (item.foodPairings === undefined) {
-                    foodPairings.style.display = "none";
-                }
-
-                showBeerResults()
-                hideSearch()
-            }
-        })
+        showBeerResults()
+        hideSearch()
     }
-    getBeer()
-    hideBeerResults()
-});
+    findSingleBeer()
+
+})
