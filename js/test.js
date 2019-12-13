@@ -25,7 +25,7 @@ randomBtn.addEventListener("click", () => {
     parameter = "random"
     endpoint = "beer"
 
-    const sandboxURLRandom = `${cors}https://sandbox-api.brewerydb.com/v2/${endpoint}/${parameter}/?key=${sandboxKey}`
+    const sandboxURLRandom = `${cors}https://api.brewerydb.com/v2/${endpoint}/${parameter}/?key=${prodKey}`
 
     async function randomBeerInfo() {
         let response = await fetch(sandboxURLRandom);
@@ -37,7 +37,7 @@ randomBtn.addEventListener("click", () => {
         beerStyle.innerHTML = beer.style.shortName;
         styleDesc.innerHTML = beer.style.description
 
-        let sandboxURLBeerID = `${cors}https://sandbox-api.brewerydb.com/v2/${endpoint}/${beerID}/?key=${sandboxKey}`
+        let sandboxURLBeerID = `${cors}https://api.brewerydb.com/v2/${endpoint}/${beerID}/?key=${prodKey}`
 
         if (beer.isRetired != "Y") {
             isRetired.innerHTML = `Beer is still in production!`
@@ -46,7 +46,7 @@ randomBtn.addEventListener("click", () => {
         }
         // hideSearch();
         // showBeerResults();
-        console.log(beerID);
+        // console.log(beerID);
 
         async function findRandomBeerInfo() {
             let response = await fetch(sandboxURLBeerID);
@@ -92,15 +92,46 @@ randomBtn.addEventListener("click", () => {
 
 searchBtn.addEventListener("click", () => {
     endpoint = "beers"
-    let beerInput = searchBtn.value;
-    let singleSearchValue = beerInput.replace(/\s/g, "+");
-    async function findSingleBeer() {
-        let URL = `${cors}https://sandbox-api.brewerydb.com/v2/${endpoint}/?key=${sandboxKey}&name=${singleSearchValue}`
-        let response = await fetch(URL);
-        let beerData = response.json();
-        let beer = beerData.data;
+    let beerInput = searchBar.value;
+    // console.log(beerInput)
+    let singleSearchValue = beerInput.replace(/ /g, "+");
 
-        console.log(beer);
+    // console.log(singleSearchValue);
+
+    async function findSingleBeer() {
+        let sandboxURL = `${cors}https://api.brewerydb.com/v2/${endpoint}/?key=${prodKey}&name=${singleSearchValue}`
+        let response = await fetch(sandboxURL);
+        let beerData = await response.json();
+        let beer = beerData.data[0];
+
+        // console.log(beer);
+
+        beerName.innerHTML = beer.name;
+        abv.innerHTML = beer.abv;
+        beerStyle.innerHTML = beer.style.shortName;
+        styleDesc.innerHTML = beer.style.description
+
+        if (beer.hasOwnProperty("labels")) {
+            label.src = beer.labels.medium;
+        } else if (beer.labels === undefined) {
+            label.src = "https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.frenchtoastsunday.com%2Fwp-content%2Fuploads%2F2015%2F02%2FBeer-icon-1.png&f=1&nofb=1"
+        }
+
+        if (beer.hasOwnProperty("description")) {
+            beerDesc.innerHTML = beer.description;
+            document.getElementById("descInfo").style.display = "block";
+        } else if (beer.description === undefined) {
+            document.getElementById("descInfo").style.display = "none";
+        }
+
+        if (beer.hasOwnProperty("foodPairings")) {
+            foodList.innerHTML = beer.foodList;
+            document.getElementById("foodPairings").style.display = "block";
+        } else if (beer.foodPairings === undefined) {
+            document.getElementById("foodPairings").style.display = "none";
+            // console.log("FAIL")
+        }
+
         showBeerResults()
         hideSearch()
     }
@@ -119,7 +150,7 @@ searchBtn.addEventListener("click", () => {
 //     endpoint = "beers"
 //     let searchData = searchBar.value;
 //     async function findBeerName() {
-//         let sandboxURL = `${cors}https://sandbox-api.brewerydb.com/v2/${endpoint}/?key=${sandboxKey}`
+//         let sandboxURL = `${cors}https://api.brewerydb.com/v2/${endpoint}/?key=${prodKey}`
 //         let response = await fetch(sandboxURL);
 //         let beerData = await response.json();
 //         let beer = beerData.data;
