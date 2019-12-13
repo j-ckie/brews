@@ -7,12 +7,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Brewpedia</title>
     <!-- favicon -->
-    <link rel='icon' href='../img/favicon.ico' type='image/x-icon' />
+    <link rel='icon' href='img/favicon.ico' type='image/x-icon' />
     <!-- bootstrap link -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <!-- CSS link -->
-    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="style/style.css">
 </head>
 
 <body>
@@ -27,7 +27,7 @@
             -->
             <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
                 <a class="navbar-brand" id="logoNav" href="index.html">
-                    <img src="../img/beers.svg" class="logo">Brewpedia</a>
+                    <img src="img/beers.svg" class="logo">Brewpedia</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -85,19 +85,18 @@
                         <div id="beer-info">
                             <div class="nameTxt"></div>
                             <p id="name"></p>
-                        <!-- <p>Brewery</p> If available -->
+                            <!-- <p>Brewery</p> If available -->
                             <div class="abvTxt">ABV</div>
                             <p id="abv" class="infoText"></p>
                             <div class="styleTxt">Category</div>
                             <p id="beerstyle" class="infoText"></p>
-                            
                             <div class="isRetTxt">Is Retired? (Y or N)</div>
                             <p id="isRetired" class="infoText"></p>
-                            <button onClick="heart()" id="heartLike">&hearts;</button>
                         </div>
+                        <button onClick="heart()" id="heartLike">&hearts;</button>
+                    </div>
+
                 </div>
-                        
-            </div>
                 <div class="row">
                     <div class="desc" id="descInfo">
                         <hr>
@@ -116,7 +115,7 @@
                     </div>
                 </div>
             </div>
-           
+
 
 
             <div id="account">
@@ -177,18 +176,18 @@
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
 
-        <script src="../js/util//fbacct.js"></script>
+        <script src="js/util//fbacct.js"></script>
 
         <!-- JS link -->
         <!-- <script src="../js/util/secret.js"></script> Prod Key -->
         <!-- <script src="../js/util/config.js"></script> Load basic config -->
-        <script src="../js/index.js"></script>
-        <script src="../js/handlers/beers.js"></script>
-        <script src="../js/handlers/breweries.js"></script>
-        <script src='../js/handlers/search.js'></script>
-        <script src="../js/handlers/random.js"></script>
-        <script src="../js/handlers/users.js"></script>
-        <script src="../js/heart.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/handlers/beers.js"></script>
+        <script src="js/handlers/breweries.js"></script>
+        <script src='js/handlers/search.js'></script>
+        <script src="js/handlers/random.js"></script>
+        <script src="js/handlers/users.js"></script>
+        <script src="js/heart.js"></script>
 
 
 
