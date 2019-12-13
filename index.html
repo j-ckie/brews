@@ -75,24 +75,27 @@
 
 
             <div class="content" id="beer-results">
-                <div class="row">
-                    <div id="beer-landing"></div>
-                    <div class="beer-label">
-                        <img class="beerLabels" src="" id="label" alt="Beer label" />
+                <div id="container">
+                    <div class="row">
+                        <div id="beer-landing"></div>
+                        <div class="beer-label">
+                            <img class="beerLabels" src="" id="label" alt="Beer label" />
+                        </div>
+
+                        <div id="beer-info">
+                            <div class="nameTxt"></div>
+                            <p id="name"></p>
+                            <!-- <p>Brewery</p> If available -->
+                            <div class="abvTxt">ABV</div>
+                            <p id="abv" class="infoText"></p>
+                            <div class="styleTxt">Category</div>
+                            <p id="beerstyle" class="infoText"></p>
+                            <div class="isRetTxt">Is Retired? (Y or N)</div>
+                            <p id="isRetired" class="infoText"></p>
+                        </div>
+                        <button onClick="heart()" id="heartLike">&hearts;</button>
                     </div>
 
-                    <div id="beer-info">
-                        <div class="nameTxt"></div>
-                        <p id="name"></p>
-                        <!-- <p>Brewery</p> If available -->
-                        <div class="abvTxt">ABV</div>
-                        <p id="abv" class="infoText"></p>
-                        <div class="styleTxt">Category</div>
-                        <p id="beerstyle" class="infoText"></p>
-                        <div class="isRetTxt">Is Retired? (Y or N)</div>
-                        <p id="isRetired" class="infoText"></p>
-                    </div>
-                    <button onClick="heart()" id="heartLike">&hearts;</button>
                 </div>
                 <div class="row">
                     <div class="desc" id="descInfo">
@@ -100,14 +103,19 @@
                         <h3 class="prodDesc">Product Description</h3>
                         <p id="beerDesc"></p>
                     </div>
-
-                    <div id="foodPairings">
+                    <div id="foodPairings" class="desc">
+                        <hr>
                         <h3 class="prodDesc">Food Pairings</h3>
                         <p id="food-pairing-list"></p>
-
+                    </div>
+                    <div id="StyleDesc" class="desc">
+                        <hr>
+                        <h3 class="prodDesc">About the Category</h3>
+                        <p id="beerStyleDesc"></p>
                     </div>
                 </div>
             </div>
+
 
 
             <div id="account">
