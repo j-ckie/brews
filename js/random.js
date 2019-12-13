@@ -5,21 +5,22 @@ let beerInfo = document.getElementById("beer-info")
 
 // let defaultImg = "SOMEIMGURL"
 
-randomBtn.addEventListener("click",()=>{
+randomBtn.addEventListener("click",()=> {
     async function getRandomBeers(){
         let response = await fetch(fakesandboxURL)
         let beers = await response.json()
 
         let randomBeers = beers[Math.floor(Math.random() * beers.length)];
-        console.log(randomBeers)
-        console.log(randomBeers.name)
+        // console.log(randomBeers)
+        // console.log(randomBeers.name)
+        
 
         let beerName = document.getElementById("name")
         let beerStyle = document.getElementById("beerstyle")
         let abv = document.getElementById("abv")
         let isRetired = document.getElementById("isRetired")
         let label = document.getElementById("label")
-        let beerDesc = document.getElementById("beer-desc")
+        let beerStyleDesc = document.getElementById("beerStyleDesc")
 
 
         if (randomBeers.hasOwnProperty("labels")) {
@@ -28,6 +29,7 @@ randomBtn.addEventListener("click",()=>{
             label.src=randomBeers.labels.medium
             abv.innerHTML= randomBeers.abv
             beerstyle.innerHTML = randomBeers.style.shortName
+            beerStyleDesc.innerHTML = randomBeers.style.description
             isRetired.innerHTML = randomBeers.isRetired
             beerDesc.innerHTML = randomBeers.description
 
@@ -38,19 +40,11 @@ randomBtn.addEventListener("click",()=>{
            beerName.innerHTML = randomBeers.name
            abv.innerHTML= randomBeers.abv
            beerstyle.innerHTML = randomBeers.style.shortName
+           beerStyleDesc.innerHTML = randomBeers.style.description
            isRetired.innerHTML = randomBeers.isRetired
            beerDesc.innerHTML = randomBeers.description
-
-        //    labels.src = defaultImg
-         } //else {
-        //     return  beerInfo = randomBeers.name,
-        //             label.src = randomBeers.labels,
-        //             beerDesc = randomBeers.description }
-
-        
-            // console.log(randomBeers.name) 
-            // console.log(randomBeers.style.shortName)
-            // console.log(randomBeers.labels.large)
+        }
     }
-    getRandomBeers() 
+    
+    getRandomBeers()
 });
