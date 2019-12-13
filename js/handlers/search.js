@@ -11,6 +11,11 @@ let label = document.getElementById("label");
 let desc = document.getElementById("descInfo")
 let navSearch = document.getElementById("navSearch");
 
+
+let parameter; // random
+
+let endpoint;
+
 navSearch.addEventListener("click", () => {
     showSearch();
     hideAccount()

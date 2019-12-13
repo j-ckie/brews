@@ -1,6 +1,7 @@
 const prodKey = prodAPIKey.key; // commenting this out for now to avoid uncaught reference error -JGL
 
 const sandboxKey = "969c47b896fcbe4c5eb88f0e259f8bb1";
+// const sandboxKey = "73bb8b75d779dfc3ebe528fde8a491fd"
 
 // let endpoint = "beers"
 
