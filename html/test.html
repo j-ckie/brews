@@ -75,11 +75,10 @@
 
 
             <div class="content" id="beer-results">
-
                 <div class="row">
                     <div id="beer-landing"></div>
                     <div class="beer-label">
-                        <img src="" id="label" alt="Beer label" />
+                        <img class="beerLabels" src="" id="label" alt="Beer label" />
                     </div>
 
                     <div id="beer-info">
@@ -90,20 +89,12 @@
                         <p id="abv" class="infoText"></p>
                         <div class="styleTxt">Category</div>
                         <p id="beerstyle" class="infoText"></p>
-                        <div class="isRetTxt">Is Retired? (Y or N)
-
-
-                        </div>
+                        <div class="isRetTxt">Is Retired? (Y or N)</div>
                         <p id="isRetired" class="infoText"></p>
-
-
                     </div>
                     <button onClick="heart()" id="heartLike">&hearts;</button>
-
-
                 </div>
                 <div class="row">
-
                     <div class="desc" id="descInfo">
                         <hr>
                         <h3 class="prodDesc">Product Description</h3>
@@ -169,7 +160,8 @@
 
         <!-- firebase links -->
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
-
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
         <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
         <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
 
@@ -181,14 +173,13 @@
 
         <!-- JS link -->
         <script src="../js/util/secret.js"></script>
-        <!-- <script src="../js/util/config.js"></script> -->
+        <script src="../js/util/config.js"></script>
         <script src="../js/index.js"></script>
         <script src="../js/handlers/beers.js"></script>
         <script src="../js/handlers/breweries.js"></script>
         <script src='../js/handlers/search.js'></script>
         <script src="../js/handlers/random.js"></script>
         <script src="../js/handlers/users.js"></script>
-        <script src="../js/test.js"></script>
         <script src="../js/heart.js"></script>
 
 
