@@ -65,6 +65,13 @@ firebase.auth().onAuthStateChanged(function (user) {
         // User is signed in.
         var email = user.email;
 
+        let heartFav = document.getElementById("heartLike")
+
+        heartFav.addEventListener("click", () => {
+
+
+        })
+
         hideLogin()
         hideSignup()
         showLogout()
@@ -148,3 +155,18 @@ navAcct.addEventListener("click", () => {
     hideBeerResults()
     showAccount()
 })
+
+const addFavBeer = (uid, favBeer) => {
+    let beerData = {
+        favoriteBeer: favBeer
+    }
+
+    let newFavKey = db.ref().push().key;
+
+    let updates = {};
+    updates[`/${uid}/${newFavKey}`] = beerData;
+
+    return db.ref().update(updates);
+}
+
+// addFavBeer("ZSehxhvDs3M9JHIOV7WFwyxHTu92", "8th Wonder Rocket Fuel");
