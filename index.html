@@ -58,7 +58,7 @@
                     <div class="search">
 
                         <input type="text" id='searchBar' placeholder="Enter name of brew..." />
-                        <button id="searchBtn">Submit</button>
+                        <button id="searchBtn" class="prettyBtn">Submit</button>
                     </div>
                 </div>
             </div>
@@ -82,8 +82,9 @@
                             <p id="beerstyle" class="infoText"></p>
                             <div class="isRetTxt">Is Retired? (Y or N)</div>
                             <p id="isRetired" class="infoText"></p>
+                            <button onClick="heart()" id="heartLike">&hearts;</button>
                         </div>
-                        <button onClick="heart()" id="heartLike">&hearts;</button>
+                        
                     </div>
 
                 </div>
@@ -95,43 +96,41 @@
                     </div>
 
                     <div class="desc" id="beer-style-description">
+                        <hr>
                         <h3 class="prodDesc">Category Description</h3>
                         <p id="beerStyleDesc"></p>
                     </div>
 
                     <div id="foodPairings">
+                        <hr>
                         <h3 class="prodDesc">Food Pairings</h3>
                         <p id="food-pairing-list"></p>
                     </div>
-                    <div id="StyleDesc" class="desc">
-                        <hr>
-                        <h3 class="prodDesc">About the Category</h3>
-                        <p id="beerStyleDesc"></p>
-                    </div>
                 </div>
             </div>
 
 
-
+        <div class="accountContent">
             <div id="account">
                 <!-- display on account click-->
-                <div id="login">
-                    <input type="text" placeholder="your@email.com" id="loginEmail" />
-                    <input type="password" placeholder="password" id="loginPw" />
-                    <button id="loginBtn">Login</button>
+                    <div id="login">
+                        <input type="text" placeholder="your@email.com" id="loginEmail" />
+                        <input type="password" placeholder="password" id="loginPw" />
+                        <button id="loginBtn" class="prettyBtn">Login</button>
+                    </div>
+                    <div id="logout">
+                        <button id="logoutBtn" class="prettyBtn">Logout</button>
+                    </div>
+                    <div id="signup">
+                        <input type="text" placeholder="you@email.com" id="signupEmail" />
+                        <input type="password" placeholder="password" id="signupPw" />
+                        <input type="password" placeholder="confirm password" id="confPw" />
+                        <button id="signupBtn" class="prettyBtn">Signup</button>
+                    </div>
+                    <p id="error-message"></p>
                 </div>
-                <div id="logout">
-                    <button id="logoutBtn">Logout</button>
-                </div>
-                <div id="signup">
-                    <input type="text" placeholder="you@email.com" id="signupEmail" />
-                    <input type="password" placeholder="password" id="signupPw" />
-                    <input type="password" placeholder="confirm password" id="confPw" />
-                    <button id="signupBtn">Signup</button>
-                </div>
-                <p id="error-message"></p>
             </div>
-
+        </div>    
             <div id="account-info">
                 <h1 id="welcomeUser"></h1>
                 <h4 id="favTitle">List of Favorite Beers</h4>

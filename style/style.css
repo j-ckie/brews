@@ -51,10 +51,42 @@ html {
 }
 
 #account {
-    padding: 3rem 4rem;
-    height: 100% !important;
-    background-color: #64798a;
+    padding: 10rem 0;
+    padding-right:25%;
+    padding-left:25%;
+    margin-top: 4%;
+    
+    /* height: 100% !important; */
+    /* background-color: gray; */
+    /* background-image: url(../img/beer-flight-hero-landing.jpg) ;
+    background-position: top; */
 }
+.accountContent{
+    display: flex;
+    background-color: rgb(255, 185, 80);
+    flex-flow: column;
+    height: 50rem;
+    
+}
+#login{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4%;
+}
+#signup{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4%;
+}
+#loginBtn{
+    background-color:coral;
+    color: white;
+}
+#signupBtn{
+    background-color:coral;
+    color: white;
+}
+
 #logoNav{
     font-family: 'Calistoga', cursive;
     font-size: 30px;
@@ -156,11 +188,12 @@ hr{
     border: solid lightgray 1px;
 }
 
-#searchBtn{
+.prettyBtn{
     color: white;
     background-color: #FA743E;
     border: none;
     border-radius: 5px;
+    margin-top: 2%;
 }
 /* Fav Heart button */
 #heartLike{
@@ -178,7 +211,7 @@ hr{
     /* flex-wrap: wrap; */
     /* align-items: center; */
     margin-top: 5%;
-    margin-right: 2%;
+    margin-right: 10%;
     justify-content: space-evenly;
 }
 
@@ -190,7 +223,11 @@ hr{
     .beer-label {
         width: 10rem;
         padding: 0 !important;
+       
         
+    }
+    .row{
+        margin-right: 10%;
     }
     .content{
         background-color: white;
@@ -210,14 +247,7 @@ hr{
     body{
         background-color:rgb(255, 185, 80);
     }
-    .row{
-        margin-left: -10%;
-        margin-right: 6%;
-    }
-    #heartLike{
-        /* padding-left:10%; */
-        
-    } 
+ 
     .desc{
         padding-left:13%;
         padding-right: 3%;
@@ -225,9 +255,9 @@ hr{
     #name{
         padding-top: 10%;
     }
-    /* #beer-info{
-        padding-left: 11%;
-    } */
+    #searchBtn{
+        margin-top: 0;}
+    
 
 
 }
