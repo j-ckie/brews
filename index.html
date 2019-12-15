@@ -84,7 +84,7 @@
                             <p id="isRetired" class="infoText"></p>
                             <button onClick="heart()" id="heartLike">&hearts;</button>
                         </div>
-                        
+
                     </div>
 
                 </div>
@@ -110,9 +110,9 @@
             </div>
 
 
-        <div class="accountContent">
-            <div id="account">
-                <!-- display on account click-->
+            <div class="accountContent" id="account">
+                <div class="randomdivelement">
+                    <!-- display on account click-->
                     <div id="login">
                         <input type="text" placeholder="your@email.com" id="loginEmail" />
                         <input type="password" placeholder="password" id="loginPw" />
@@ -129,16 +129,18 @@
                     </div>
                     <p id="error-message"></p>
                 </div>
-            </div>
-        </div>    
-            <div id="account-info">
-                <h1 id="welcomeUser"></h1>
-                <h4 id="favTitle">List of Favorite Beers</h4>
-                <ul id="beerFavs">
-                </ul>
+                <div id="account-info">
+                    <h1 id="welcomeUser"></h1>
+                    <h4 id="favTitle">List of Favorite Beers</h4>
+                    <ul id="beerFavs">
+                    </ul>
+                </div>
             </div>
 
-            <!-- <div class="footer col-12">
+        </div>
+
+
+        <!-- <div class="footer col-12">
 
                 <p>&copy; AG, JGL, ADS</p>
                 <p>All rights reserved</p>
@@ -146,48 +148,48 @@
 
 
 
-        </div>
+    </div>
 
 
 
-        <!-- bootstrap JS link -->
-        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
-            crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-            crossorigin="anonymous"></script>
+    <!-- bootstrap JS link -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
-        <!-- firebase links -->
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
-        <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
+    <!-- firebase links -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-database.js"></script>
+    <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-analytics.js"></script>
 
-        <!-- Add Firebase products that you want to use -->
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
+    <!-- Add Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.2/firebase-firestore.js"></script>
 
-        <script src="js/util//fbacct.js"></script>
+    <script src="js/util//fbacct.js"></script>
 
-        <!-- JS link -->
+    <!-- JS link -->
 
-        <script src="js/util/secret.js"></script>
-        <script src="js/util/config.js"></script>
-        <script src="js/index.js"></script>
-        <script src="js/handlers/beers.js"></script>
-        <script src="js/handlers/breweries.js"></script>
-        <script src='js/handlers/search.js'></script>
-        <script src="js/handlers/random.js"></script>
+    <script src="js/util/secret.js"></script>
+    <script src="js/util/config.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/handlers/beers.js"></script>
+    <script src="js/handlers/breweries.js"></script>
+    <script src='js/handlers/search.js'></script>
+    <script src="js/handlers/random.js"></script>
 
-        <!-- <!-- <script src="js/test.js"></script> -->
+    <!-- <!-- <script src="js/test.js"></script> -->
 
-        <script src="js/handlers/users.js"></script>
-        <script src="js/heart.js"></script>
+    <script src="js/handlers/users.js"></script>
+    <script src="js/heart.js"></script>
 
 
 
