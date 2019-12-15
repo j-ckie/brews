@@ -156,6 +156,7 @@ navAcct.addEventListener("click", () => {
     showAccount()
 })
 
+
 const addFavBeer = (uid, favBeer) => {
     let beerData = {
         favoriteBeer: favBeer
