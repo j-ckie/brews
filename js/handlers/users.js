@@ -13,6 +13,9 @@ const navAcct = document.getElementById("navAcct");
 
 let showError = document.getElementById("error-message");
 
+let userName = document.getElementById("welcomeUser");
+let beerFavList = document.getElementById("beerFavs")
+
 // regex to validate if data is an email
 const isEmail = email => {
     const regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
@@ -62,24 +65,53 @@ const validateLoginData = data => {
 // watches login status
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
+
+        // let uid = user.uid
         // User is signed in.
-        var email = user.email;
+        // show fav button
+        let email = user.email
 
         let heartFav = document.getElementById("heartLike")
 
         heartFav.addEventListener("click", () => {
-
-
+            addFavBeer(uid, beerName.value);
         })
 
+        let uid = firebase.auth().currentUser.uid;
+
+        let userData = db.ref(uid)
+        let beerList = []
+        beerFavList.innerHTML = ""
+        userData.child(`fav-list`).orderByKey().on("child_added", function (snapshot) {
+            // console.log(snapshot.key)
+            let snap = snapshot.child(`favoriteBeer`).node_.value_;
+            beerFavList.innerHTML += `<li>${snap}</li>`;
+
+
+        });
+        //beerFavList.innerHTML = beerList;
+
+        // console.log(userData.value);
+
+        userName.innerHTML = `Welcome back, ${email}!`
+
+        // beerFavList.innerHTML = `List of Favorite Beers:\n$`
+
+        showAcctInfo()
+        showFavBtn()
         hideLogin()
         hideSignup()
         showLogout()
 
     } else {
+
+        // hide fav button
         // User is signed out.
         // ..
         // console.log("user signed out");
+        // refreshPage()
+        hideAcctInfo()
+        hideFavBtn()
         showLogin()
         showSignup()
     }
@@ -145,9 +177,12 @@ logoutBtn.addEventListener("click", (req, res) => {
         }).catch((err) => {
 
         })
+
     showLogin();
     showSignup();
     hideLogout();
+    hideAcctInfo()
+    refreshPage()
 })
 
 navAcct.addEventListener("click", () => {
@@ -165,9 +200,9 @@ const addFavBeer = (uid, favBeer) => {
     let newFavKey = db.ref().push().key;
 
     let updates = {};
-    updates[`/${uid}/${newFavKey}`] = beerData;
+    updates[`/${uid}/fav-list/${newFavKey}`] = beerData;
 
     return db.ref().update(updates);
 }
 
-// addFavBeer("ZSehxhvDs3M9JHIOV7WFwyxHTu92", "8th Wonder Rocket Fuel");
+// addFavBeer("ZSehxhvDs3M9JHIOV7WFwyxHTu92", "8th Wonder Love Street");

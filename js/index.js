@@ -56,6 +56,28 @@ const showErrorMsg = () => {
     document.getElementById("error-message").style.display = "block"
 }
 
+const hideFavBtn = () => {
+    document.getElementById("heartLike").style.display = "none"
+}
+
+const showFavBtn = () => {
+    document.getElementById("heartLike").style.display = "block"
+}
+
+const hideAcctInfo = () => {
+    document.getElementById("account-info").style.display = "none"
+    document.getElementById("favTitle").style.display = "none"
+}
+
+const showAcctInfo = () => {
+    document.getElementById("favTitle").style.display = "block"
+    document.getElementById("account-info").style.display = "block"
+}
+
+const refreshPage = () => {
+    location.reload();
+}
+
 hideBeerResults();
 hideAccount();
 hideErrorMsg();
