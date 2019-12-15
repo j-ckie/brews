@@ -16,6 +16,8 @@ randomBtn.addEventListener("click", () => {
         let beer = beerData.data;
         let beerID = beer.id;
         beerName.innerHTML = beer.name;
+        beerName.value = beer.name; // this gets the CURRENT INNERHTML VALUE
+        // console.log(beerName.value)
         abv.innerHTML = beer.abv;
         beerStyle.innerHTML = beer.style.shortName;
         styleDesc.innerHTML = beer.style.description
